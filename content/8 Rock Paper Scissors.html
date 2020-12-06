@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='目錄.html'>目錄</a><li><a href='課程單字.html'>課程單字</a><li class='has-children'><a href='homework1.html'>homework1</a><ul class='dropdown'><li class='has-children'><a href='UNIT1.html'>UNIT1</a><ul class='dropdown'><li><a href='Succeeding in PC Hardware.html'>Succeeding in PC Hardware</a></li></ul><li class='has-children'><a href='UNIT5.html'>UNIT5</a><ul class='dropdown'><li><a href='PCH 19  Notebook Power and Physical Security.html'>PCH 19  Notebook Power and Physical Security</a></li></li></ul></ul><li><a href='w7 kaggle.html'>w7 kaggle</a><li><a href='w8 kaggle.html'>w8 kaggle</a><li><a href='homework2.html'>homework2</a><li class='has-children'><a href='homework3.html'>homework3</a><ul class='dropdown'><li class='has-children'><a href='8 Rock Paper Scissors.html'>8 Rock Paper Scissors</a><ul class='dropdown'><li><a href='While loops.html'>While loops</a><li><a href='While循環.html'>While循環</a></li>
+                     <li><a href='目錄.html'>目錄</a><li><a href='課程單字.html'>課程單字</a><li class='has-children'><a href='homework1.html'>homework1</a><ul class='dropdown'><li class='has-children'><a href='UNIT1.html'>UNIT1</a><ul class='dropdown'><li><a href='Succeeding in PC Hardware.html'>Succeeding in PC Hardware</a></li></ul><li class='has-children'><a href='UNIT5.html'>UNIT5</a><ul class='dropdown'><li><a href='PCH 19  Notebook Power and Physical Security.html'>PCH 19  Notebook Power and Physical Security</a></li></li></ul></ul><li><a href='w7 kaggle.html'>w7 kaggle</a><li><a href='w8 kaggle.html'>w8 kaggle</a><li><a href='homework2.html'>homework2</a><li class='has-children'><a href='homework3.html'>homework3</a><ul class='dropdown'><li><a href='8 Rock Paper Scissors.html'>8 Rock Paper Scissors</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,7 +133,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">homework3 << <a href='homework3.html'>Previous</a> <a href='While loops.html'>Next</a> >> While loops<br /><h1>8 Rock Paper Scissors</h1>
+    <div id="tipue_search_content">homework3 << <a href='homework3.html'>Previous</a> <br /><h1>8 Rock Paper Scissors</h1>
 <p><span>Make a two-player Rock-Paper-Scissors game. (</span><em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em><span>)</span></p>
 <p><span><span>製作兩人石頭剪刀布遊戲。（</span><em><span><span>提示：（使用</span></span><code class="highlighter-rouge">input</code><span><span>）</span><span>詢問玩家玩法</span><span>，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲</span></span></em><span><span>）</span></span></span></p>
 <p>Rmember the rules:</p>
@@ -161,7 +161,48 @@ img.add_border {
 <li><span><span>無限循環</span></span></li>
 <li><span><span>中斷聲明</span></span></li>
 </ul>
-<br />homework3 << <a href='homework3.html'>Previous</a> <a href='While loops.html'>Next</a> >> While loops</div>
+While loops
+<p>We have already discussed<span> </span><code class="highlighter-rouge">for</code><span> </span>loops, or loops that look sequentially (one by one) at elements in a list. There is a second type of loop that works in a slightly different way called a<span> </span><code class="highlighter-rouge">while</code><span> </span>loop.</p>
+<p>The idea is simple: while a certain condition is<span> </span><code class="highlighter-rouge">True</code>, keep doing something. For example:</p>
+<span>While循環</span>
+<p><span><span>我們已經討論過</span></span><code class="highlighter-rouge">for</code><span><span>循環，或循環（逐一）查看列表中的元素的循環。</span><span>還有第二種類型的循環，其工作方式略有不同，稱為</span></span><code class="highlighter-rouge">while</code><span><span>循環。</span></span></p>
+<p><span><span>這個想法很簡單：在一定條件下</span></span><code class="highlighter-rouge">True</code><span><span>，繼續做某事。</span><span>例如：</span></span></p>
+<p><code class="py plain"><span face="Verdana, Arial, Helvetica, sans-serif" style="font-family: Verdana, Arial, Helvetica, sans-serif;">    </span>a </code><code class="py keyword">=</code> <span style="color: #339966;"><code class="py value">5</code></span></p>
+<p><code class="py keyword">    <span style="color: #000080;"> while</span></code> <code class="py plain">(a &gt; </code><span style="color: #339966;"><code class="py value">0</code></span><code class="py plain">):</code></p>
+<div class="line number3 index2 alt2"><code class="py functions">       <span style="color: #ff0000;">print</span></code><code class="py plain">(a)</code></div>
+<div class="line number4 index3 alt1"><code class="py plain">       a </code><code class="py keyword">-</code><code class="py keyword">=</code> <span style="color: #008000;"><code class="py value">1</code></span></div>
+<div class="line number4 index3 alt1">
+<p>The output of this code segment is:</p>
+<p><span>該代碼段的輸出為：</span></p>
+<pre><span style="color: #008000;"><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1<br/><span style="color: #000000;">A particularly useful way to use <code class="highlighter-rouge">while</code> loops is checking user input for correctness. For example:</span><br/><span style="color: #000000;">使用<code class="highlighter-rouge">while</code>循環的一種特別有用的方法是檢查用戶輸入的正確性。例如：<br/></span></span></code></span></pre>
+<pre><code class="language-python" data-lang="python">  <span class="n">quit</span> <span class="o">=</span> <span class="nb" style="color: #008000;">input</span><span class="p">(</span><span class="s" style="color: #ff0000;">'Type "enter" to quit:'</span> <span class="p">)</span>
+ <strong> <span class="k">while</span></strong> <span class="n">quit</span> <span class="o">!=</span> <span class="s" style="color: #ff0000;">"enter"</span><span class="p">:</span>
+    <span class="n">quit</span> <span class="o">=</span> <span class="nb" style="color: #008000;">input</span><span class="p">(</span><span class="s"><span style="color: #ff0000;">'Type "enter" to quit:'</span></span> <span class="p">)<br/><span>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</span><br/><span>此方法的用途是無限的，並且可以（並且應該！）與條件條件結合使用以產生最有效的結果。<br/><br/>infinite loops </span></span></code>無限循環<br/><br/><span>An infinite loop is a loop that never stops. This means that the condition in the beginning of the while loop will always be true.<br/>無限循環是永不停止的循環。<span>這意味著while循環開始時的條件將始終為true。</span><br/><br/>For example: 例如：<br/></span></pre>
+<pre><code class="language-python" data-lang="python">  <span class="n">i</span> <span class="o">=</span> <span class="mi" style="color: #008000;">5</span>
+  <strong><span class="k">while</span></strong> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi" style="color: #008000;">0</span><span class="p">:</span>
+    <strong><span class="k">print</span></strong><span class="p">(</span><span class="s" style="color: #ff0000;">"Inside the loop"</span><span class="p">)<br/><span>What will happen is the loop will print out the phrase “Inside the loop” forever and ever. If you are running your computer, you will have to “kill the program” to stop it. Each operating system has a different way of “killing a program” to get out of an infinite loop.</span><br/><span>將會發生的是，循環將永遠打印出短語“ Inside the loop”。</span><span>如果您正在運行計算機，則必須“殺死該程序”以將其停止。</span><span>每個操作系統都有不同的“殺死程序”的方法來擺脫無限循環。</span><br/><span>On Linux: in the terminal, type “CTRL-C” to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press “CTRL-D” to exit your running program. When in doubt, do a Google search before you start programming!</span><br/><span>在Linux上：在終端中，鍵入“ CTRL-C”以終止終端中當前正在運行的程序。</span><span>如果使用的是IDLE Python IDE，則必須按“ CTRL-D”退出正在運行的程序。</span><span>如有疑問，請在開始編程之前進行Google搜索！</span><br/><span>On Windows: type “CTRL-ALT-DEL” and open the task manager to kill the program.</span><br/><span>在Windows上：鍵入“ CTRL-ALT-DEL”並打開任務管理器以終止程序。</span><br/><span>On Mac: right-click on the task, and kill the program that is running forever.</span><br/><span>在Mac上：右鍵單擊該任務，然後終止永久運行的程序。</span><br/><span>If you find yourself in an infinite loop, your program will never end.</span><br/><span>如果發現自己陷入無限循環，則程序將永遠不會結束。</span><br/><br/><code class="highlighter-rouge">Break</code><span><span> </span>statements</span></span></code>中斷聲明<br/><span>A </span><code class="highlighter-rouge">break</code><span><span> </span>statement stops the execution of a loop before the original condition is met. While the use of a<span> </span></span><code class="highlighter-rouge">break</code><span><span> </span>statement will often start an argument about good coding practices, sometimes it is useful.</span><br/><code class="highlighter-rouge">break</code><span><span>在滿足原始條件之前，</span><span>一條</span><span>語句將停止執行循環。</span><span>儘管使用</span></span><code class="highlighter-rouge">break</code><span><span>語句通常會引發有關良好編碼實踐的爭論，但有時它很有用。</span></span><br/><span>For example: 例如：<br/></span></pre>
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp" style="color: #808080;">True</span><span class="p">:</span> 
+    <span class="n">usr_command</span> <span class="o">=</span> <span class="nb" style="color: #0000ff;">input</span><span class="p">(</span><span class="s" style="color: #ff0000;">"Enter your command: "</span><span class="p">)</span>
+    <strong><span class="k">if</span></strong> <span class="n">usr_command</span> <span class="o">==</span> <span class="s" style="color: #ff0000;">"quit"</span><span class="p">:</span>
+      <strong><span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span></strong><span class="p">(</span><span class="s" style="color: #ff0000;">"You typed "</span> <span class="o">+</span> <span class="n">usr_command</span><span class="p">)<br/></span></code></pre>
+<p>In this case, the<span> </span><code class="highlighter-rouge">break</code><span> </span>statement is used to break off the “infinite while loop” that we have constructed with the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement.</p>
+<p><span>在這種情況下，該</span><code class="highlighter-rouge">break</code><span><span>語句用於中斷我們使用該</span></span><code class="highlighter-rouge">while True</code><span><span>語句</span><span>構造的“無限while循環”<span> </span></span><span>。</span></span></p>
+<p><span><span></span></span></p>
+<p></p>
+<pre><code class="language-python" data-lang="python"><span class="p"> </span></code></pre>
+<pre><span></span></pre>
+<pre><span></span><code class="language-python" data-lang="python"><span class="p"><br/><br/></span></code></pre>
+<pre><span style="color: #008000;"><code class="language-python" data-lang="python"><span class="mi"><span style="color: #000000;"></span><br/></span></code></span></pre>
+</div>
+<strong></strong></div>
+</div>
+</div><br />homework3 << <a href='homework3.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
