@@ -226,7 +226,7 @@ While loops
 <p>In this case, the<span> </span><code class="highlighter-rouge">break</code><span> </span>statement is used to break off the “infinite while loop” that we have constructed with the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement.</p>
 <p><span>在這種情況下，該</span><code class="highlighter-rouge">break</code><span><span>語句用於中斷我們使用該</span></span><code class="highlighter-rouge">while True</code><span><span>語句</span><span>構造的“無限while循環”<span> </span></span><span>。</span></span></p>
 <h2><span><span>13 Fibonacci </span></span></h2>
-<p><span><span>exercise 13 (and solution) 練習13(和練習)</span></span></p>
+<p><span><span>exercise 13 (and solution) 練習13(解決例題)</span></span></p>
 <p><span><span>Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in the sequence to generate.(<em>Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …</em><span>)</span></span></span></p>
 <p><span><span><span><span>編寫一個程序，問用戶需要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。請確保要求用戶輸入要生成</span><em><span><span>的序列中的數字</span></span></em><span><span>。（</span><em><span>提示：Fibonnaci序列是數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1、1、2、3、5、8、13…</span></em><span>）</span></span></span></span></span></p>
 <p><span><span><span><span><span>Sample solution 例題</span></span></span></span></span></p>
@@ -269,7 +269,104 @@ input()<br/><br/></pre>
 <p><span>該解決方案使用了所謂的計算斐波納契數的“重複”方法。</span><span>這意味著您使用某種循環來將數字加在一起以獲得下一個數字。</span></p>
 <p>An alternative way of computing Fibonacci numbers is to use<span> </span><em>recursion</em>, or calling the same function over and over in a special way, to compute the Fibonacci numbers. We will talk about this in a future exercise.</p>
 <p><span>計算斐波那契數的另一種方法是使用</span><em><span><span>遞歸</span></span></em><span><span>，或以一種特殊的方式反複調用相同的函數來計算斐波那契數。</span><span>我們將在以後的練習中討論這一點。</span></span></p>
-<pre><br/><br/><br/></pre>
+<h2><span><span>20 element search 元素搜尋</span></span></h2>
+<p>exercise 20 (and solution) 練習20 (解決例題)</p>
+<p><span>Write a function that takes an ordered list of numbers (a list where the elements are in order from smallest to largest) and another number. The function decides whether or not the given number is inside the list and returns (then prints) an appropriate boolean.</span></p>
+<p><span><span>編寫一個函數，該函數接受一個有序的數字列表（一個元素從最小到最大的順序列表）和另一個數字。</span><span>該函數確定給定的數字是否在列表內，並返回（然後打印）適當的布爾值。</span></span></p>
+<p><span><span>Extras: 附加功能:</span></span></p>
+<ul>
+<li>Use binary search.  <span><span>使用二進制搜索。</span></span></li>
+</ul>
+<pre>Discussion 討論</pre>
+<p>Topics:</p>
+<ol>
+<li>Booleans - True and False</li>
+<li>Equality testing</li>
+<li>Binary search</li>
+</ol>
+<p><span>主題：</span></p>
+<ol>
+<li><span><span>布爾值-對與錯</span></span></li>
+<li><span><span>平等測試</span></span></li>
+<li><span><span>二進制搜索  </span></span><span><span></span></span></li>
+</ol>
+<p>Booleans</p>
+<p>When you are writing programs, there is often a time when you need to make a decision about something based on the truthfulness of something else. Basically, you need to make a decision based on whether something is TRUE or something is FALSE.</p>
+<pre><span>在編寫程序時，通常會需要根據其他事物的真實性來做出決策。</span><span>基本上，您需要根據某物是TRUE還是FALSE來做出決定。</span><br/><br/></pre>
+<p>An obvious example is when using conditionals: </p>
+<p><span>一個明顯的例子是使用條件句時：</span></p>
+<pre><code class="language-python" data-lang="python"><span class="n">michele_age</span> <span class="o">=</span> <span class="mi">22</span>
+  <span class="n">truth_value</span> <span class="o">=</span> <span class="n">michele_age</span> <span class="o">&gt;</span> <span class="mi">17</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">truth_value</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Michele can see a rated R movie"</span><span class="p">)<br/></span></code></pre>
+<p>(We talked about this idea of conditionals in<span> </span><a href="https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html">a previous post</a>.)</p>
+<p><span>（我們在上</span><a href="https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html"><span><span>一篇文章中</span></span></a><span><span>討論了這種條件條件的概念</span><span>。）</span></span></p>
+<p>But what is happening behind the scenes is that the statement<span> </span><code class="highlighter-rouge">michele_age &gt; 17</code><span> </span>is being evaluated into a type that is either<span> </span><code class="highlighter-rouge">True</code><span> </span>or<span> </span><code class="highlighter-rouge">False</code>. This is then getting stored inside the variable<span> </span><code class="highlighter-rouge">truth_value</code>, and then the decision is being made inside the conditional.</p>
+<p>Here is another example:</p>
+<p><span>但是幕後發生的事情是該語句</span><code class="highlighter-rouge">michele_age &gt; 17</code><span>正在被評估為</span><code class="highlighter-rouge">True</code><span>or或類型</span><code class="highlighter-rouge">False</code><span>。然後將其存儲在變量中</span><code class="highlighter-rouge">truth_value</code><span>，然後在條件中進行決策。</span></p>
+<p><span><span>這是另一個示例：</span></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"How old are you? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">17</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)<br/><span>What the </span><code class="highlighter-rouge">while True</code><span><span> </span>statement does at the beginning of the code segment is continue asking for an age and printing a response - it never stops. (To stop it, press CTRL-C in a terminal or in the Python shell).</span></span></code></pre>
+<p><span><span><span>該</span><code class="highlighter-rouge">while True</code><span><span>語句在代碼段開頭的作用是繼續詢問年齡並打印響應-它永遠不會停止。</span><span>（要停止它，請在終端或Python Shell中按CTRL-C）。</span></span></span></span></p>
+<p><span><span><span><span>These types - <code class="highlighter-rouge">True</code><span><span> </span>and<span> </span></span><code class="highlighter-rouge">False</code><span><span> </span>are called<span> </span></span>boolean<span><span> </span>types or<span> </span></span>boolean<span><span> </span>variables. They can only take on two values, either<span> </span></span><code class="highlighter-rouge">True</code><span><span> </span>or<span> </span></span><code class="highlighter-rouge">False</code><span>.</span></span></span></span></span></p>
+<p><span>這些類型的-</span><code class="highlighter-rouge">True</code><span>和</span><code class="highlighter-rouge">False</code><span>被稱為</span>布爾<span>類型或</span>布爾<span>變量。它們只能採用</span><code class="highlighter-rouge">True</code><span>或的兩個值</span><code class="highlighter-rouge">False</code><span>。</span></p>
+<p><span><span>要更廣泛地了解Python布爾值，請查看這些資源</span></span><span><span>。</span></span></p>
+<p>Equality testing on strings  字符串相等性測試</p>
+<pre><code class="language-python" data-lang="python"><span class="p"></span></code>Scenarios come up with where you need to test if things are equal to each other numbers or something else .We covered this idea in a previous post ,but it is worth returning to again,this time for strings.</pre>
+<figure class="highlight"></figure>
+<pre><span>在場景中，您需要測試事物是否彼此相等-數字或字符串或其他。我們在上</span><a href="https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html"><span><span>一篇文章中</span></span></a><span><span>介紹了這個想法</span><span>，但是這次還是值得再來一次。</span></span><br/><br/><span>Remember, comparing numbers for equality is done with an </span><code class="highlighter-rouge">==</code><span><span> </span>sign, like so:</span><br/><span>請記住，比較數字是否相等是用一個</span><code class="highlighter-rouge">==</code><span><span>符號</span><span>完成的</span><span>，如下所示：</span></span></pre>
+<pre><code class="language-python" data-lang="python"> <span class="n">age</span> <span class="o">=</span> <span class="mi">21</span>
+  <span class="k">if</span> <span class="n">age</span> <span class="o">==</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are 21!"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You're old."</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Young one!"</span><span class="p">)<br/><br/></span></code><span>Turns out, comparing strings is equally (hehe..) simple, using a </span><code class="highlighter-rouge">==</code><span><span> </span>to check for equality and<span> </span></span><code class="highlighter-rouge">!=</code><span><span> </span>to check for inequality.<br/><br/>事實證明，使用a<code class="highlighter-rouge">==</code><span><span>來檢查相等性和</span></span><code class="highlighter-rouge">!=</code><span><span>檢查</span><span>不相等性，比較字符串同樣簡單（嘿，..）</span><span>。</span></span><br/></span></pre>
+<pre><code class="language-python" data-lang="python"><span class="n">password</span> <span class="o">=</span> <span class="s">"unsafepassword"</span>
+  <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">"unsafepassword"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You may enter."</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try again!"</span><span class="p">)<br/><span>Or, a more practical password-checking piece of code:</span><br/><span>或者，使用更實用的密碼檢查代碼：</span><br/></span></code></pre>
+<pre><code class="language-python" data-lang="python">  <span class="n">real_password</span> <span class="o">=</span> <span class="s">"unsafepassword"</span>
+  <span class="n">user_password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the password: "</span><span class="p">)</span>
+  <span class="k">while</span> <span class="n">user_password</span> <span class="o">!=</span> <span class="n">real_password</span><span class="p">:</span>
+    <span class="n">user_password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the password: "</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"You may enter!"</span><span class="p">)<br/></span></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="p"></span></code>Binary search </pre>
+<p>There are a number of ways to search for elements in a list, and there is no one correct way to do so. The point of this exercise is to get you thinking about possible ways to search for elements in the list, in an entire sequence of exercises about lists, searching, and sorting. This exercise might seem silly and easy at first, but the more you dive into this topic, the more difficult it becomes.</p>
+<p><span>有多種方法可以搜索列表中的元素，但沒有一種正確的方法可以搜索列表中的元素。</span><span>該練習的目的是讓您思考有關列表，搜索和排序的整個練習序列中搜索列表中元素的可能方法。</span><span>剛開始時，此練習可能看起來很愚蠢且容易，但是您越深入該主題，就越困難。</span></p>
+<pre><code class="language-python" data-lang="python"><span class="p"><span>The word “binary” means there are two choices (in computers, often this is 0 or 1, but it really means any choice between two things). “Search” is to look for something. So the main idea behind binary search is to look for something in a way that gives you a decision tree for where to look, containing two choices. Let me give you an example:</span><br/><span>“二進制”一詞表示有兩種選擇（在計算機中，通常為0或1，但實際上表示在兩種情況之間可以選擇）。</span><span>“搜索”是尋找東西。</span><span>因此，二進制搜索背後的主要思想是以某種方式查找內容，該方式可以為您提供決策樹，以查找位置，其中包含兩個選擇。</span><span>讓我舉一個例子：</span></span></code></pre>
+<pre><span>Let’s take the list <code class="highlighter-rouge">a = [1, 3, 5, 30, 42, 43, 500]</code><span>. It is an “ordered list”, or a list where the elements in the list go from smaller to larger. Let’s say we want to know whether the element<span> </span></span><code class="highlighter-rouge">9</code><span><span> </span>is in the list or not. Here is what we do:</span><br/></span></pre>
+<p><span>讓我們看一下清單</span><code class="highlighter-rouge">a = [1, 3, 5, 30, 42, 43, 500]</code><span>。它是一個“有序列表”，或者是列表中元素從小到大的列表。假設我們想知道元素</span><code class="highlighter-rouge">9</code><span>是否在列表中。這是我們的工作：</span></p>
+<ul>
+<li>Look at the middle element in the list - it is ‘30’. * ‘9 &lt; 30’, so let us ignore the elements to the right of ‘30’.</li>
+<li>The new list we are looking at is now<span> </span><code class="highlighter-rouge">[1, 3, 5]</code>.</li>
+<li>Look at the middle element in this new list - it is<span> </span><code class="highlighter-rouge">3</code>.</li>
+<li>‘9 &gt; 3’, so ignore the elements to the left of<span> </span><code class="highlighter-rouge">3</code>.</li>
+<li>The new list we are looking at is<span> </span><code class="highlighter-rouge">[5]</code>.</li>
+<li>The list has one element and it is not<span> </span><code class="highlighter-rouge">9</code>.</li>
+<li><code class="highlighter-rouge">9</code><span> </span>is not in the list.</li>
+</ul>
+<ul>
+<li><span>查看列表中的中間元素-它是“ 30”。*'9 &lt;30'，因此讓我們忽略'30'右邊的元素。</span></li>
+<li><span>現在我們正在查看的新列表</span><code class="highlighter-rouge">[1, 3, 5]</code><span>。</span></li>
+<li><span>看一下這個新列表的中間元素-是</span><code class="highlighter-rouge">3</code><span>。</span></li>
+<li><span>'9&gt; 3'，因此忽略左側的元素</span><code class="highlighter-rouge">3</code><span>。</span></li>
+<li><span>我們正在查看的新列表是</span><code class="highlighter-rouge">[5]</code><span>。</span></li>
+<li><span>該列表只有一個元素，而沒有</span><code class="highlighter-rouge">9</code><span>。</span></li>
+<li><code class="highlighter-rouge">9</code><span><span> </span>不在列表中。</span></li>
+</ul>
+<p><span>What the example shows is that in an ordered list, knowing how the element you are looking for compares to another element in the list splits the list in two - one half where the element can be, and one where it definitely cannot be. In the case where our list contains millions of elements, knowing that we can cut the “search space” in half is a great increase in efficiency.</span></p>
+<p><span><span>該示例顯示的是，在有序列表中，知道要查找的元素與列表中另一個元素的比較方式，將列表分為兩部分-元素可以位於其中一半，而絕對不能位於其中。</span><span>在我們的列表包含數百萬個元素的情況下，知道我們可以將“搜索空間”減少一半，這將大大提高效率。</span></span></p>
+<p><span><span>When you are writing the solution, first try to write it without binary search. Then when you want to try implementing binary search, write a separate function. In the solution I will give an example for how to write a binary search in Python.</span></span></p>
+<p><span>在編寫解決方案時，請首先嘗試在不進行二進制搜索的情況下編寫它。然後，當您想嘗試實現二進制搜索時，編寫一個單獨的函數。在解決方案中，我將給出一個示例，說明如何使用Python編寫二進制搜索。</span></p>
+<p><span></span></p>
 <pre><span></span></pre>
 </div>
 <strong></strong></div>
