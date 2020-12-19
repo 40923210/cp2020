@@ -87,6 +87,7 @@ img.add_border {
 </head>
 <body>
 <div class='container'><nav>
+        
     <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -132,4 +133,103 @@ img.add_border {
           </div>
           
         </header>
-    </nav><section><h1>Site Map</h1><div id="tipue_search_content"></div><ul><li><a href='目錄.html'>目錄</a><li><a href='課程單字.html'>課程單字</a><li><a href='homework1.html'>homework1</a><ul><li><a href='UNIT1.html'>UNIT1</a><ul><li><a href='Succeeding in PC Hardware.html'>Succeeding in PC Hardware</a></li></ul><li><a href='UNIT5.html'>UNIT5</a><ul><li><a href='PCH 19  Notebook Power and Physical Security.html'>PCH 19  Notebook Power and Physical Security</a></li></li></ul></ul><li><a href='w7 kaggle.html'>w7 kaggle</a><li><a href='w8 kaggle.html'>w8 kaggle</a><li><a href='homework2.html'>homework2</a><li><a href='homewor3.html'>homewor3</a><ul><li><a href='8 Rock Paper Scissors.html'>8 Rock Paper Scissors</a><li><a href='13 Fibonacci.html'>13 Fibonacci</a></li></ul></section></div></body></html>
+    <div id="tipue_search_content">8 Rock Paper Scissors << <a href='8 Rock Paper Scissors.html'>Previous</a> <br /><h1>13 Fibonacci</h1>
+<p><span><span>exercise 13 (and solution) 練習13(和練習)</span></span></p>
+<p><span><span>Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in the sequence to generate.(<em>Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …</em><span>)</span></span></span></p>
+<p><span><span><span><span>編寫一個程序，問用戶需要生成多少斐波那契數字，然後生成它們。藉此機會考慮如何使用功能。請確保要求用戶輸入要生成</span><em><span><span>的序列中的數字</span></span></em><span><span>。（</span><em><span>提示：Fibonnaci序列是數字序列，其中序列中的下一個數字是序列中前兩個數字的和。該序列看起來像這樣：1、1、2、3、5、8、13…</span></em><span>）</span></span></span></span></span></p>
+<p><span><span><span><span><span>Sample solution 例題</span></span></span></span></span></p>
+<p><span><span><span><span><span>There are so many ways that you can use functions to generate Fibonacci numbers. Here is one user-submitted solution:</span></span></span></span></span></p>
+<p><span><span><span><span><span><span>你可以通過多種方式使用函數來生成斐波那契數。</span><span>這是用戶提交的一種解決方案：</span></span></span></span></span></span></p>
+<pre>def gen_fib():
+    count = int(input("How many fibonacci numbers would you like to generate? "))
+    i = 1
+    if count == 0:
+        fib = []
+    elif count == 1:
+        fib = [1]
+    elif count == 2:
+        fib = [1,1]
+    elif count &gt; 2:
+        fib = [1,1]
+        while i &lt; (count - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+
+    return fib<br/><br/>and another 另一個<br/><br/></pre>
+<pre>def fibonacci():
+    num = int(input("How many numbers that generates?:"))
+    i = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num &gt; 2:
+        fib = [1,1]
+        while i &lt; (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
+print(fibonacci())
+input()<br/><br/></pre>
+<p>This solution is using what is called the “iterative” method of computing Fibonacci numbers. This means you use some kind of loop to keep adding numbers together to get the next number.</p>
+<p><span>該解決方案使用了所謂的計算斐波納契數的“重複”方法。</span><span>這意味著您使用某種循環來將數字加在一起以獲得下一個數字。</span></p>
+<p>An alternative way of computing Fibonacci numbers is to use<span> </span><em>recursion</em>, or calling the same function over and over in a special way, to compute the Fibonacci numbers. We will talk about this in a future exercise.</p>
+<p><span>計算斐波那契數的另一種方法是使用</span><em><span><span>遞歸</span></span></em><span><span>，或以一種特殊的方式反複調用相同的函數來計算斐波那契數。</span><span>我們將在以後的練習中討論這一點。</span></span></p>
+<pre><br/><br/><br/></pre>
+<pre><span></span></pre>
+</div>
+<strong></strong></div>
+</div>
+</div><br />8 Rock Paper Scissors << <a href='8 Rock Paper Scissors.html'>Previous</a> </div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
